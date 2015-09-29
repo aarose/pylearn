@@ -1,1 +1,1057 @@
-Ceci n'est pas un "Hello World"
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Intro to Python</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400|Roboto:100);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      body { font-family: 'Open Sans', sans-serif; }
+      h1, h2, h3 {
+        font-family: 'Roboto', serif;
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono', monospace; }
+      .default { background: #F5F5F5;}
+      a:link { color: #FF0000; }
+      a:visited { color: #FF0000; }
+
+      .remark-inline-code { color: #FF0000 }
+      .left-column {
+        margin-top: -2em;
+        width: 50%;
+        float: left;
+      }
+      .right-column {
+        margin-top: -2em;
+        width: 45%;
+        float: right;
+      } 
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, default
+
+# Learning to Program with Python
+
+Anarosa Paredes
+
+[@aarosered](http://twitter.com/aarosered)
+
+---
+class: default
+
+# The Agenda
+
+1. Intro
+    1. What Is Programming?
+    1. What Is Python?
+1. Python    
+    1. Integers and String
+    1. Functions
+    1. Variables
+    1. Booleans
+    1. Conditionals
+    1. While loop
+    1. Lists
+    1. For loop
+1. More Projects
+1. Python Resources
+
+---
+class: default
+name: what-is-programming
+
+# What Is Programming?
+
+1. Telling computers what to do.
+
+--
+
+(that's it)
+
+---
+class: default
+
+# Why Is It Important?
+
+???
+
+Why are you guys here?
+
+--
+- It's a way to express ourselves
+
+???
+
+It's creative, hands-on
+
+--
+
+- Useful
+
+???
+
+Useful just about anywhere: art, engineering, fashion, games, health care, humanitarianism, law, libraries, movies, physics, science, sports, social justice
+
+--
+
+- Power to build and control our world
+
+???
+
+Control your world.
+
+---
+
+class: default
+
+# What is Python?
+
+--
+- A programming language
+
+--
+
+- What's a programming language?
+
+--
+
+- Why do we need one?
+
+???
+
+Glad you asked!
+
+---
+
+class: default
+
+# Computers don't speak human
+
+.center[![Adventuretime GIF of BMO being scolded for not working properly](http://i.imgur.com/mW77JeC.gif)]
+
+???
+
+Computers speak in zeroes and ones. Humans speak in words. Python lets you go from words to zeros and ones.
+
+--
+
+This is where a programming language comes in.
+
+---
+
+class: default
+
+# Programming == Instructions
+
+--
+
+## How to cross a road?
+
+--
+
+.center[![Kid doesn't know how to cross the road](http://www.gifbin.com/bin/102011/1319652035_kid_crossing_the_street_on_red_light.gif)]
+
+???
+
+Pretend we need to teach this kid how to cross a road. How would you guys do it?
+Talk amongst yourselves for a couple of minutes. Break it down into steps.
+
+---
+
+class: default
+
+# How to Cross a Road
+
+1. Stand at the curb, on the pavement.
+
+2. Look left, look right.
+
+3. When there's no traffic coming, it's safe to cross the road.
+
+???
+
+This is what I came up with! Yours may be different, but there are many ways to break the problem down.
+
+---
+
+class: default
+
+# But for a computer...
+
+--
+
+.center[![Robot exploding](http://fc06.deviantart.net/fs70/f/2012/179/e/0/chef_bot___does_not_compute__by_giframa-d555wi8.gif)]
+
+???
+
+This isn't good enough. Computers are really dumb. We need to define every little piece. It will take you very literally.
+
+---
+
+class: default
+
+# Why Python?
+
+.center[![Monty Python](assets/images/monty-python.gif)]
+--
+
+- Simple
+
+???
+
+Reads like English.
+
+--
+
+- Powerful
+
+???
+
+Lots of built-in libraries, tools and stuff.
+
+---
+
+class: default
+# Let's Use Python!
+
+.left-column[
+  ### OS X
+
+  ``` 
+  Finder -> Applications -> Utilities
+  -> Terminal
+  ```  
+  .center[![Mac OS Terminal Icon](assets/images/mac-term.png)]
+
+  ``` bash
+  $ python 
+  ```
+]
+.right-column[
+  ### Windows
+
+    Start -> Programs -> Python 2.7
+    -> Python (command line)
+  .center[![Windows Python Icon](assets/images/windows-python.png)]
+
+]
+
+---
+
+class: default
+# Follow Along!
+
+
+Let's start talking to the python _interpreter_
+
+Tip: Ctrl-c for getting un-stuck
+
+???
+
+Python is good at math. (Do some simple math here)
+
+Python is good at words. (Use print)
+
+ctl-c for getting un-stuck
+
+Python classifies these into types.
+
+Whole numbers = ints
+Words = strings
+We can use the type() function to investigate
+
+--
+
+## Strings and Integers!
+---
+
+class: default
+
+# Type( ) and Print( )
+
+???
+
+A little pause to talk about what commands like 'type' and 'print' are!
+
+Functions!
+
+Functions "do stuff".
+
+We'll dive a bit more into it when we create our own.
+
+--
+
+.center[![Depiction of a function](assets/images/function.jpeg)]
+
+--
+
+.left-column[![Print function](assets/images/function2.jpg)]
+
+.right-column[.right[![Type function](assets/images/function3.jpg)]]
+
+???
+
+- Use brackets for functions, to give it inputs/arguments
+
+Now that we know what functions are, let's use some to draw some stuff!
+---
+
+class: default
+
+# Turtle
+
+```
+import turtle
+turtle.forward(20)
+turtle.left(90)
+```
+
+.center[![Turtle smiling](assets/images/turtle.gif)]
+
+???
+
+Let's draw a square!
+
+Let's draw a triangle!
+
+How would we make a hexagon? Use some math for other shapes.
+
+We'll return to this later.
+---
+
+class: default
+
+# Back to Integers and Strings!
+
+.center[![Something Completely Different](assets/images/monty-python-different.gif)]
+???
+
+Errors + Debugging: Python does compain when you mix types with operators
+
+Error messages are important! Read them!
+
+Break your stuff! It won't ruin anything.
+
+String building! Let's look at some of the stuff strings can do, using dir()
+
+---
+
+class: default
+
+# Building Strings
+
+- We can add
+
+- We can multiply to get repeating parts
+
+- Special, built-in functions like `replace()` or `lower()`
+
+???
+
+So now, let's look at getting strings from a user! We use raw_input()
+
+What if we want to re-use it? We use variables!
+
+How to make one?
+
+How to replace what's inside?
+
+Can add x + 1 like a number
+
+Can print it alongside a string
+---
+
+class: default
+
+# Variables
+
+.center[![Cup](assets/images/variables.jpg)]
+
+**Variables are like a cup**:
+ - can put ("assign") things into them
+ - can get things out of them
+ - can put new things into them.
+
+???
+
+We can use many variables at once! e.g. 'Anarosa' is friends with 'Laura'.
+
+Variables save us from long typing
+
+Easy to change our minds
+
+Hold values we don't know yet - like with raw_input
+
+---
+class: default
+
+# Let's Explore A Little
+
+???
+
+Now let's play around with variables a bit.
+--
+
+What happens if put something new into the variable?
+
+--
+
+Are variable names "case sensitive"?
+
+???
+
+If favourite_colour = blue, will FAVOURITE_COLOUR work?
+
+--
+
+Can we use spaces in variable names? Punctuation? Numbers?
+
+--
+
+What happens if you assign one variable to another variable?
+
+---
+
+class: default
+
+# Back to Strings
+
+## This time, with variables!
+
+???
+
+name = 'Anarosa'
+
+name.upper()
+
+We can do everything that we could do to 'Anarosa' to our name variable.
+
+Q: If I do name.upper(), what's the value of name now? Poll.
+
+A: Still pointing to old value
+
+Show new way to mix variables and strings in print.
+
+---
+
+class: default, center
+
+# Recap!
+
+--
+
+### Python classifies things into types
+
+???
+
+Name two types.
+
+--
+
+### Read error messages!
+
+--
+
+### `dir()`
+
+--
+
+### `raw_input()`
+
+--
+
+### Variables
+
+---
+
+class: default
+
+# Saving Your Code Somewhere
+
+.center[![Goofy Python Puppet](assets/images/goofy-python.jpg)]
+
+???
+
+Step 1: Create a folder to hold your code, somewhere easy
+
+Step 2: Create a .py file
+
+Step 3: Easy for Macs, hard for Windows! If using a terminal, cd to the new folder and feed python your file.
+
+If using Windows, can use execfile() function
+
+---
+class:default
+# Strings - Special Characters
+
+???
+
+Print using 3 different statements (demo)
+
+OR we can use the newline character "\n"
+
+--
+
+Try :
+
+```
+\'
+\"
+\t
+\n
+\a   # Make sure your speakers are on for this one!
+```
+
+---
+
+class: default
+
+# Our First Program!
+
+## Movie ticket program
+
+1. Start with a given number of tickets
+
+2. Ask the user how many they want
+
+3. Keep track of how many tickets are left
+
+4. Show the user how many tickets they bought
+
+5. Show the user how many tickets are left
+
+???
+
+Hint: Cast raw_input to change the type from string to an int using int()
+---
+
+class: default
+
+Work with your group to write a program that looks like this:
+
+```
+There are 100 ticket(s) left
+Get your tickets before we sell out!
+How many tickets would you like?
+2
+You bought 2 ticket(s)
+There are 98 ticket(s) left
+```
+
+???
+
+Answers in assignments/tickets_1.py
+
+Mentor note: Don't use conditionals just yet, just keep it simple.
+
+Will have errors, like dipping into the negatives.
+---
+class: default
+# Making It Smarter!
+
+### How would we stop selling if the user asks for too many tickets?
+
+--
+
+Conditionals!
+
+--
+
+.center[![If This Then That](assets/images/if-this-then-that.jpg)]
+
+---
+
+class:default
+
+# New Type: Booleans!
+
+--
+
+.center[![Chris Pratt gasps](assets/images/gasp.gif)]
+--
+
+- True
+- False
+
+```
+>>> type(True)
+<type 'bool'>
+```
+
+???
+
+So conditionals operate on things being either True or False.
+
+if True, do something. else, do something else
+
+Indentation matters for this!
+
+---
+class: default
+
+# Conditional Logic
+
+--
+
+### Greater than
+
+```
+>>> 200 > 100
+True
+```
+
+--
+
+### Less than
+
+```
+>>> 200 < 100
+False
+```
+???
+
+So, now let's go back to the ticket program:
+
+if num_tickets = 100, can do 120 > num_tickets and get bools back
+
+---
+
+class: default
+
+## Try It Out!
+
+???
+
+Fix your program so that it handles the case of the user asking for more tickets than you have
+
+--
+
+```
+tickets_wanted = 5
+number_tickets = 10
+if tickets_wanted > num_tickets:
+    # Add code here
+else:
+    # Add code for the other case here
+```
+
+???
+
+Answers in assignments/tickets_2.py
+---
+
+class: default
+
+# What if there are more possibilities?
+
+--
+
+### Elif!
+
+.center[![Person is astonished](assets/images/elif.gif)]
+
+???
+
+so if today == 'Saturday', have it print different statements, depending on what day it is
+
+---
+
+class: default
+
+# Other Operators
+
+<center>
+<table border=2>
+    <tr>
+        <th>Operator</th>
+        <th>True</th>
+        <th>False</th>
+    </tr>
+    <tr>
+        <td>==</td>
+        <td>99 == 99</td>
+        <td>99 == 100</td>
+    </tr>
+    <tr>
+        <td>!=</td>
+        <td>99 != 100</td>
+        <td>99 != 99</td>
+    </tr>
+    <tr>
+        <td>> and >=</td>
+        <td>100 > 99, 100 >= 100</td>
+        <td>99 > 100, 100 > 100</td>
+    </tr>
+    <tr>
+        <td>< and <=</td>
+        <td>99 < 100, 100 <= 100</td>
+        <td>100 < 99, 100 < 100</td>
+    </tr>
+</table>
+</center>
+
+--
+
+Try these out! With a group:
+
+- What happens with strings? (`is "Coke" > "Pepsi"`)
+- Is it case sensitive? (`is "Anarosa" == "anarosa"`)
+- Mix strings and integers (`is 2 == "2"`)
+- Can you find other surprising things?
+
+---
+
+class: default, center
+
+# Recap!
+
+--
+
+### How to write a python file, and run it
+
+--
+
+### Special characters, like `\n`
+
+--
+
+### `bool`s
+
+--
+
+### Conditionals: `If... Else`, and `If...Elif...Else`
+
+--
+
+### Operators to use with conditionals
+
+---
+
+class: default
+
+# Let's Make a Game!
+
+### "Guess My Number"
+
+???
+
+Your program is "thinking" about a number and you need to guess what it is.
+
+Hint: import random
+
+random.randint(1,20)
+
+--
+
+- We know how to ask for player input
+
+--
+
+- We know how to compare the guess to the secret number
+
+--
+
+- But how to give the user more than one chance?
+
+???
+
+This is where we meet the while loop!
+
+are_we_there = False
+while are_we_there == False:
+   print 'How much longer?'
+
+Ctl-c is our panic button!
+
+---
+
+class: default
+# `while` Loop Example
+
+```
+hungry = "yes"
+while hungry == "yes":
+    print "Eat"
+        hungry = raw_input("Are you hungry? ")
+        print "Done eating!"
+```
+
+.center[![Looping gif](assets/images/loops.gif)]
+---
+
+class: default
+
+# Guess My Number
+
+```
+I am thinking of a number between 1 and 20
+Take a guess: 1
+Too low!
+Take a guess: 2
+Too low!
+Take a guess: 20
+Too high!
+Take a guess: 10
+Too low!
+Take a guess: 15
+Good job! You guessed my number in 5 guesses!
+```
+
+???
+
+Answers: assignments/random_game.py
+
+---
+
+class: default
+
+# Lists
+
+### Demo!
+
+???
+
+Can hold a bunch of things, called items
+
+ints
+
+strings
+
+Each item lives at a certain "address" in the list (index)
+
+--
+
+### Experiment!
+
+- Can you put a list inside a list?
+- Can you have an empty list?
+- What happens if you put a variable inside a list?
+
+---
+
+class: default
+
+# Manipulating Lists
+
+--
+
+### Finding out the length of a list
+
+???
+
+After some experiment time: len() for length of lists (also works w strings)
+
+--
+
+### Adding
+
+???
+
+append()
+--
+
+### Removing
+
+???
+
+remove()
+
+But beware if the item is not in your list!
+
+--
+
+### Loops
+
+???
+
+Loops! for colour in colours: print colour
+---
+class: default
+
+# `range`
+
+### For loops that run a certain number of times
+
+--
+
+```
+>>> range(5)
+[0, 1, 2, 3, 4]
+```
+
+--
+
+```
+for num in range(3):
+...    print "num is:", num
+...
+num is: 0
+num is: 1
+num is: 2
+```
+
+---
+
+
+class: default
+
+# `break`-ing out of a loop
+
+
+### The `break` keyword lets you stop a loop in its tracks:
+
+--
+
+```
+secret = "secretcode"
+print "You get 3 chances to get this right"
+for i in range(0,3):
+    password = raw_input("Please enter your password: ")
+    if password == secret:
+        print "You're in!"
+        break
+if password != secret:
+    print "Sorry you've lost your chance, it's too late now"
+```
+
+???
+
+example in code/secret_word.py
+
+---
+
+class: default
+
+# `while` loop vs. `for` loop
+
+--
+
+### Anything that you can do with a `while` loop you can do with a `for` loop
+
+--
+
+```
+print "Counting to 10"
+for i in range(0, 11):
+    print i
+```
+
+--
+
+```
+print "Counting to 10"
+x = 0
+while x < 11:
+    print x
+    x = x + 1
+```
+
+---
+
+class: default
+
+# Three Favourite Foods
+
+### Ask for someone's three favourite lunches, then print them out
+
+--
+
+```
+What do you like to eat for lunch? Pizza
+What do you like to eat for lunch? Sandwiches
+What do you like to eat for lunch? Sushi
+Great! You like:
+Pizza
+Sandwiches
+Sushi
+```
+
+.center[![Finn and Jake eat food](assets/images/food.gif)]
+
+???
+answers in assignments/favorite_foods.py
+
+---
+
+class: default, center
+
+# Recap!
+
+--
+
+### `while` loops
+
+--
+
+### `for` loops
+
+--
+
+### lists
+
+--
+
+### `len()`, `append()`, `remove()`, `range()`
+
+--
+
+### `break`
+
+---
+
+class: default
+
+# Let's build things!
+
+### Projects:
+
+--
+
+A program to write in **secret code** (and then a program to *break* the secret code)
+
+```
+assignments/secret_code.py
+```
+
+--
+
+Use `turtle` to write your name and draw a picture
+
+```
+assignments/turtle_pictures.py
+```
+
+--
+
+Write a hangman game
+
+```
+assignments/hangman.py
+```
+
+---
+
+class: default
+
+# Python Resources
+
+*   <a href="http://learnpythonthehardway.org/book/" target="_blank">Learn Python the Hard Way</a> - a free book which teaches Python in a well structured, systematic way. Also has a paid content available (videos, etc).
+*   <a href="http://inventwithpython.com/pygame/index.html" target="_blank">Invent with Python</a> - a free book which teaches Python while writing games (with sound and pictures and everything)
+*   <a href="http://www.codecademy.com/tracks/python" target="_blank">Code Academy</a> - Interactive lessons, full course of Python
+*   <a href="http://www.pythontutor.com/visualize.html" targer="_blank">Python Visualizer</a> - Tries to show you how python executes its code, with diagrams and step-by-step playthroughs
+*   <a href="https://twitter.com/aarosered" target="_blank">@aarosered</a>
+
+    </textarea>
+    <script src="assets/remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create({
+        highlightStyle: 'googlecode',
+        highlightLanguage: 'python'
+      });
+    </script>
+  </body>
+</html>

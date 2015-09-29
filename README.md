@@ -1,4 +1,11 @@
-pylearn
-=======
+# README #
 
-Quick presentation with resources and tips for learning Python
+These are the slides for the Intro to Python one-day workshop!
+
+## Concepts
+
+* types
+* loops
+* conditionals
+* iterations
+* debugging
